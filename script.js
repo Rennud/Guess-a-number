@@ -1,7 +1,6 @@
-"use strict";
-
 //Generate secret number between 1 - 20
-const secretNumber = Math.trunc(Math.random() * 20) + 1;
+const generateSecretNumber = () => Math.trunc(Math.random() * 20) + 1;
+let secretNumber = generateSecretNumber();
 
 let score = 20;
 let highscore = 0;
@@ -53,9 +52,8 @@ document.querySelector(".check").addEventListener("click", function () {
 // Play again
 document.querySelector(".again").addEventListener("click", function () {
   score = 20;
-  secretNumber();
   displayNumber("?");
-  displayScore(score);
+  secretNumber = generateSecretNumber();
   displayMessage("Start guessing...");
   document.querySelector(".guess").value = "";
   document.querySelector(".number").style.width = "15rem";

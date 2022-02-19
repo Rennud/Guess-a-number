@@ -17,6 +17,7 @@ const displayNumber = function (number) {
   return (document.querySelector(".number").textContent = number);
 };
 
+// Show ? insted of secret number
 displayNumber("?");
 
 document.querySelector(".check").addEventListener("click", function () {
